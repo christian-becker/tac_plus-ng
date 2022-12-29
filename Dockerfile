@@ -27,8 +27,9 @@ RUN wget https://github.com/MarcJHuber/event-driven-servers/archive/refs/heads/m
     ./configure && \
     make && \
     make install && \
-    # copy AD sample configuration file
-    cp /event-driven-servers-master/tac_plus-ng/sample/tac_plus-ng.cfg /usr/local/etc/tac_plus-ng.cfg
+    # copy sample configuration file
+    cp /event-driven-servers-master/tac_plus-ng/sample/tac_plus-ng.cfg /usr/local/etc/tac_plus-ng.cfg && \
+    echo "! service setup successful !"
 
 # expose port
 Expose 49
