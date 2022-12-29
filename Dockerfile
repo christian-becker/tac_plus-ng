@@ -19,18 +19,15 @@ RUN apk add --no-cache \
         perl-sys-syslog \
     && echo "! installation is finished !"
 
-# download MarcJHuber event-driven-servers / tac_plus-ng repository
-ADD https://github.com/MarcJHuber/event-driven-servers/archive/refs/heads/master.zip event-driven-servers-master.zip
-
-# install event-driven-servers / tac_plus-ng
-RUN unzip event-driven-servers-master.zip && \
+# download and install MarcJHuber event-driven-servers / tac_plus-ng repository
+RUN wget https://github.com/MarcJHuber/event-driven-servers/archive/refs/heads/master.zip -O event-driven-servers-master.zip && \
+    unzip event-driven-servers-master.zip && \
     cd event-driven-servers-master && \
     ./configure && \
     make && \
-    make install
-
-# copy AD sample configuration file
-COPY event-driven-servers-master/tac_plus-ng/extra/tac_plus-ng.cfg-ads /usr/local/etc/tac_plus-ng.cfg
+    make install && \
+    # copy AD sample configuration file
+    cp /event-driven-servers-master/tac_plus-ng/sample/tac_plus-ng.cfg /usr/local/etc/tac_plus-ng.cfg
 
 # expose port
 Expose 49
