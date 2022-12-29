@@ -6,6 +6,7 @@ MAINTAINER Christian Becker <mail@christianbecker.name>
 RUN apk add --no-cache \
         build-base \
         c-ares-dev \
+        curl \
         curl-dev \
         freeradius-client-dev \
         libretls-dev \
