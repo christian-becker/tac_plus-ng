@@ -1,0 +1,3 @@
+# tac_plus-ng log files
+log/*
+!log/.gitkeep
