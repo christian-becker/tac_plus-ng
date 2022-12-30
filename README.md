@@ -39,6 +39,23 @@ Depending on your setup, you can use a simple bash script to manage the containe
 
 ---
 
+### Network device configuration
+Configure your network devices to use the new TACACS+ service - example: 
+```
+# Aruba CX switch
+tacacs-server host 192.168.1.3
+tacacs-server key plaintext "SECRET30CHARACTERTACACSKEY1234"
+```
+
+
+---
+
+### Logging
+If you have enabled logging in your tac_plus-ng.cfg configuration file, all login attempts (failed or succeeded) are logged. The logging includes date, time, device, username, source of connection and status.  
+
+
+---
+
 ## project links
 [GitHub](https://github.com/christian-becker/tac_plus-ng)  
 [Docker Hub](https://hub.docker.com/r/christianbecker/tac_plus-ng/)
