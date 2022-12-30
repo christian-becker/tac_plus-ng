@@ -2,7 +2,7 @@
 Run "tac_plus-ng", a new TACACS+ daemon, on Alpine Linux with Docker.  
 This version of tac_plus-ng is a major rewrite of the original public Cisco source code and is in turn largely based on tac_plus from Marc Huber.  
 It has multiple useful features, like LDAP / ActiveDirectory / RADIUS backends and rule-based permission assignment.   
-Project URLs: https://www.pro-bono-publico.de/projects/tac_plus-ng.html and https://github.com/MarcJHuber/event-driven-servers/   
+Project URLs: https://www.pro-bono-publico.de/projects/ and https://github.com/MarcJHuber/event-driven-servers/   
 
 ---
 
@@ -26,6 +26,14 @@ Hint: The sample configuration "etc/sample_tac_plus-ng.cfg-ads_working" is worki
 Run the container with: 
 ```
 docker run --name tac_plus-ng -p 49:49 -v $(pwd)/etc/tac_plus-ng.cfg:/usr/local/etc/tac_plus-ng.cfg -v $(pwd)/log/:/var/log/ -d -t --restart=always christianbecker/tac_plus-ng 
+```
+
+---
+
+### 4.) OPTIONAL: Script on docker host
+Depending on your setup, you can use a simple bash script to manage the container on docker host: 
+```
+./tac_plus-ng.sh
 ```
 
 
