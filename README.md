@@ -17,7 +17,8 @@ docker build -t christianbecker/tac_plus-ng .
 ---
 
 ### 2.) CONFIGURE the container - tac_plus-ng
-Just copy your tac_plus-ng configuration to "etc" directory or adjust your settings in the existing file "tac_plus-ng.cfg".
+Just copy your tac_plus-ng configuration to "etc" directory or adjust your settings in the existing file "tac_plus-ng.cfg".  
+Hint: The sample configuration "etc/sample_tac_plus-ng.cfg-ads_working" is working well with Active Directory backend and logging. The AD groups "tacacs_admins" and "tacacs_readonly" can get access to network devices with different privelege levels.  
 
 ---
 
