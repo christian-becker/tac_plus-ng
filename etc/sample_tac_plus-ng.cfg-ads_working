@@ -42,6 +42,7 @@ id = tac_plus-ng {
 		address = 0.0.0.0/0, ::/0
 		welcome banner = "Welcome\n"
 		enable 15 = clear SECRETENABLEPASSWORD
+		anonymous-enable = deny # ask for user authentication on enable
 		key = SECRET30CHARACTERTACACSKEY1234
 	}
 
