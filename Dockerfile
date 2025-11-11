@@ -29,6 +29,8 @@ RUN wget https://github.com/MarcJHuber/event-driven-servers/archive/refs/heads/m
     make install && \
     # copy sample configuration file
     cp /event-driven-servers-master/tac_plus-ng/sample/tac_plus-ng.cfg /usr/local/etc/tac_plus-ng.cfg && \
+    # cleanup
+    rm -rf /event-driven-servers-master* && \
     echo "! service setup successful !"
 
 # expose port
